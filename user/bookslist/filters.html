@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="filters.css">
+    <title>Library Management</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="bookslist.html">Home</a></li>
+                <li class="right"><a href="#">Library Management</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="filters">
+            <label for="title">Title:</label>
+            <input type="text" id="title" placeholder="Enter title">
+
+            <label for="author">Author:</label>
+            <input type="text" id="author" placeholder="Enter author">
+
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" placeholder="Enter subject">
+
+            <label for="publish-date">Publish Date:</label>
+            <input type="date" id="publish-date">
+
+            <br>
+
+            <button onclick="applyFilters()">Apply Filters</button>
+            <button onclick="resetFilters()">Reset Filters</button>
+        </div>
+
+        <div class="book-container">
+            <!-- Book sections will be dynamically generated here -->
+        </div>
+
+        <div class="pagination">
+            <button onclick="prevPage()">Previous</button>
+            <span id="page-number">1</span>
+            <button onclick="nextPage()">Next</button>
+        </div>
+    </main>
+
+    <script src="filters.js"></script>
+</body>
+</html>
